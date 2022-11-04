@@ -1,0 +1,103 @@
+.content_about {
+    margin: 25px;
+
+    .wp-checkout {
+        font-size: 1.5rem;
+        display: flex;
+        gap: 16px;
+
+        &--left {
+            width: 60%;
+            height: 100%;
+            padding: 16px;
+            border-radius: 12px;
+            box-shadow: 1px 1px 20px 5px rgb(0 0 0 / 40%);
+
+            &__address {
+                &>h1 {
+                    margin-bottom: 16px;
+                    color: #88b44e;
+                    font-size: 2rem;
+                    font-weight: 700;
+                }
+
+                &-content {
+                    &>p {
+                        margin-bottom: 5px;
+
+                        &>span:last-child {
+                            font-weight: bold;
+
+
+                        }
+                    }
+                }
+            }
+        }
+
+        &--right {
+            width: 40%;
+            padding: 16px;
+            border-radius: 12px;
+            box-shadow: 1px 1px 20px 5px rgb(0 0 0 / 40%);
+
+            &__checkout {
+                &-header {
+                    display: flex;
+                    justify-content: space-between;
+                    font-size: 2rem;
+                    padding: 8px 0;
+                    font-weight: 500;
+                    text-transform: uppercase;
+                    font-weight: lighter;
+                    position: relative;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        width: 151px;
+                        height: 2px;
+                        color: #88b44e;
+                        background: #88b44e;
+                        bottom: 0px;
+                    }
+
+                }
+
+                &-list {
+                    font-size: 1.8rem;
+
+                    &_item {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        border-bottom: 1px solid $title-color;
+                        height: 45px;
+                    }
+
+                }
+
+                &-footer {
+                    display: flex;
+                    justify-content: space-between;
+                    font-size: 3rem;
+                }
+
+                &-button {
+                    text-align: center;
+                    padding: 12px 0;
+
+                    &_link {
+                        font-size: 1.6rem;
+                        background-color: $title-color !important;
+                        color: $text-color;
+                    }
+
+                }
+
+
+
+            }
+        }
+    }
+}

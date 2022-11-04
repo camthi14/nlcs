@@ -1,0 +1,53 @@
+.green {
+    color: $primary-color !important;
+}
+
+.white {
+    color: $text-color !important;
+}
+
+.link {
+    color: #E14D2A;
+    transition: all 0.25s ease-in-out 0s;
+
+    &:hover {
+        opacity: 0.8;
+        color: $primary-color;
+    }
+}
+
+.desc {
+    color: #ccc !important;
+}
+
+.home_bg-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 45px;
+    color: $text-color;
+    border-radius: 32px;
+
+}
+
+
+.home {
+    .home_main-about {
+        @include font($font-title, 1.6rem, 300, 1.6rem);
+        font-style: italic;
+        color: $primary-color;
+        margin-top: 30px;
+    }
+
+    .home_main-title {
+        @include font($font-title, 5rem, 700, none);
+        color: $title-color;
+        margin: 20px 0 35px;
+    }
+
+    .home_main-sub {
+        @include font($font, 2rem, 200, 1.4);
+        color: $desc-color;
+    }
+}

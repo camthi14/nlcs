@@ -1,0 +1,82 @@
+.app {
+    .wpd_icon-main {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: $title-color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 70px;
+        z-index: 99999;
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.3s linear;
+        transform: translateY(-70px);
+
+
+        .wpd_icon-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 45px;
+
+
+
+            .wpd-input {
+                width: 900px;
+                display: flex;
+                justify-content: space-between;
+                height: 100%;
+
+                .input-search {
+                    width: 100%;
+                    border: none;
+                    outline: none;
+                    padding-left: 30px;
+                    background-image: url('../image/index/customers-bg.png');
+                    font-size: 1.6rem;
+
+                    &::placeholder {
+                        @include font($font, 1.6rem, 300, 1.6rem);
+                        font-style: italic;
+                        color: $title-color;
+                        
+
+                    }
+                    
+                }
+
+                .icon-search {
+                    width: 45px;
+                    @include hover($text-color, $title-color);
+                    border: none;
+                    font-size: 1.6rem;
+
+                    &:hover {
+                        background-color: $primary-color;
+                    }
+                }
+
+            }
+
+            .wpd_icon-close {
+                border: none;
+                @include hover($text-color, $title-color);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-left: 10px;
+                width: 45px;
+                height: 100%;
+                @include font($font, 1.6rem, 300, 1.6rem);
+                cursor: pointer;
+
+                &:hover {
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+}

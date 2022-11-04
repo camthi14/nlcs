@@ -1,0 +1,394 @@
+main {
+    .blog {
+        .blog_main {
+            padding: 0 15px 0 10px;
+            margin: 0;
+
+            .blog_main-left {
+                margin: 60px 15px 0 30px;
+                padding: 0;
+                max-width: 770px;
+
+                .blog_content-item {
+                    margin-bottom: 30px;
+                    padding: 0;
+                    display: flex;
+                    flex-direction: column;
+                    border-radius: 2px;
+                    overflow: hidden;
+                    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+
+                    .blog_content-link {
+                        display: inline-block;
+                        text-decoration: none;
+
+
+                        .content-img {
+                            overflow: hidden;
+                            height: 470px;
+
+
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                                transform: scale(1);
+                                transition: transform 0.5s;
+                            }
+
+                            img:hover {
+                                transform: scale(1.2);
+                            }
+                        }
+
+                        .content-about {
+                            padding: 30px 0 0 20px;
+                            @include font($font, 1.8rem, 400, 1.8rem);
+                            color: $primary-color;
+                            font-style: italic
+                        }
+
+                        .content-title {
+                            @include font($font-title, 3.2rem, 700, 3.2rem);
+                            color: $title-color;
+                            margin: 10px 0 20px;
+                            padding: 0 20px;
+
+                        }
+                    }
+
+                    .content-sub {
+                        color: $title-color;
+                        @include font($font, 1.8rem, 400, 1.4);
+                        text-align: justify;
+                        padding: 0 20px;
+                    }
+
+                    .content-calendar {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: center;
+                        height: 70px;
+                        margin: 30px 20px 0;
+                        color: $title-color;
+                        border-top: 1px solid #ccc;
+                        @include font($font, 1.4rem, 400, 1.4);
+
+                        .content-month {
+                            display: flex;
+                            font-weight: bold;
+                        }
+
+                        .content-info {
+                            display: flex;
+
+                            div {
+                                i {
+                                    color: $primary-color;
+                                }
+                            }
+
+                            .content-view {
+                                padding-left: 30px;
+                            }
+                        }
+                    }
+                    
+
+
+
+
+                }
+
+                .blog_content-item.blog_content-item1 {
+                    background-color: $text-color;
+                    border-bottom: 5px solid $text-color;
+
+                    &:hover {
+                        background-color: rgba(136, 180, 78, 0.1);
+                        border-bottom: 5px solid $primary-color;
+                    }
+
+                    .content-title {
+                        &:hover {
+                            @include hover(none, $primary-color);
+                        }
+                    }
+                }
+
+                .blog_content-item2 {
+                    position: relative;
+
+                    .bg_content-body {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        z-index: 1;
+                        background-color: rgba(0, 0, 0, 0.5);
+
+                        .content-body {
+
+                            .content-about2 {
+                                position: absolute;
+                                left: 0;
+                                top: 0;
+                                cursor: text;
+                            }
+
+                            .content-title2 {
+                                position: absolute;
+                                bottom: 0;
+                                display: flex;
+                                flex-direction: column;
+                                color: $text-color;
+                                text-shadow: 5px 2px 4px $title-color;
+                                cursor: text;
+
+                                span {
+                                    margin-bottom: 8px;
+                                    @include font($font-title, 1.8rem, 400, 1.8rem);
+                                    color: $desc-color;
+                                }
+
+                            }
+                        }
+                    }
+
+                    &:hover .content-img {
+                        img {
+                            transform: scale(1.1);
+                        }
+                    }
+                }
+
+                .blog_content-note {
+                    margin-bottom: 30px;
+                    border-bottom: 5px solid transparent;
+                    border-radius: 3px;
+                    background-color: rgba(136, 180, 78, 0.1);
+
+                    .blog_content-link {
+                        text-decoration: none;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+
+
+                        .content-about {
+                            padding: 60px 0 0 20px;
+                            @include font($font, 1.8rem, 400, 1.8rem);
+                            color: $primary-color;
+                            font-style: italic
+                        }
+
+                        .content-sub {
+                            color: $title-color;
+                            @include font($font, 1.8rem, 400, 1.4);
+                            text-align: center;
+                            padding: 0 60px;
+                        }
+
+                        .link-icon,
+                        .quote {
+                            font-size: 3.2rem;
+                            color: $primary-color;
+                            padding: 10px 0 60px;
+                        }
+                    }
+
+                    &:hover {
+                        border-bottom: 5px solid $primary-color;
+                    }
+
+                }
+
+            }
+
+            .blog_main-right {
+                padding: 60px 40px;
+                margin: 0 25px;
+                max-width: 385px;
+                background-color: rgb(245, 248, 242);
+                border-top: 5px solid $primary-color;
+
+                .blog_right-content {
+                    margin-bottom: 60px;
+
+                    .blog_right-name {
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: 20px;
+
+                        h3 {
+                            @include font($font, 2.4rem, 700, 1.2);
+                            padding: 0 10px;
+                        }
+
+                        .line {
+                            width: 30px;
+                            height: 0.5px;
+                            background-color: $primary-color;
+                        }
+                    }
+
+                    .blog_right-search {
+                        width: 100%;
+                        height: 50px;
+                        border: 1px solid $primary-color;
+                        display: flex;
+                        border-radius: 32px;
+                        overflow: hidden;
+                        background-color: $text-color;
+
+                        @include font($font, 1.8rem, none, none);
+
+                        input {
+                            background-image: url('../image/index/customers-bg.png');
+                            width: calc(100% - 50px);
+                            height: 100%;
+                            border: none;
+                            outline: none;
+                            padding: 0 30px;
+                        }
+
+                        button {
+                            width: 50px;
+                            height: 100%;
+                            border: none;
+                            background-color: transparent;
+
+                        }
+
+                    }
+
+                    .blog_categories-list {
+                        .blog_categories-item {
+                            margin: 8px 0;
+                            @include font($font, 1.6rem, 400, 1.6rem);
+                            color: $primary-color;
+
+                            .blog_categories-link {
+                                text-decoration: none;
+                                color: $title-color;
+
+                                &:hover {
+                                    @include hover(none, $primary-color);
+                                }
+                            }
+
+                        }
+                    }
+
+                    .blog_recent-list {
+                        .recent_main {
+                            text-decoration: none;
+                            display: flex;
+                            margin-bottom: 20px;
+                            color: $title-color;
+
+                            .recent_main-img {
+
+                                img {
+                                    width: 90px;
+                                    height: 60px;
+                                    transform: scale(1);
+                                    transition: transform ease-in .3s;
+                                    border-radius: 3px;
+
+                                    &:hover {
+                                        transform: scale(1.1);
+                                    }
+                                }
+                            }
+
+
+
+                            .recent_op {
+                                padding-left: 20px;
+
+                                .recent_date {
+                                    @include font($font, 1.4rem, 400, 1.4rem);
+                                    color: $desc-color;
+                                    font-style: italic;
+                                    margin-bottom: 6px
+                                }
+
+                                .recent_name {
+                                    @include font($font, 1.6rem, 400, 1.2);
+                                    margin: 0;
+                                }
+                            }
+
+                            &:hover {
+                                @include hover(none, $primary-color);
+                            }
+                        }
+                    }
+
+                    .blog_read-more {
+                        text-decoration: none;
+
+                        button {
+                            border-radius: 32px;
+                            width: 120px;
+                            height: 35px;
+                            @include hover($primary-color, $text-color);
+                            border: none;
+                            color: $text-color;
+                            @include font($font, 1.4rem, 500, none);
+
+
+                            &:hover {
+                                @include hover($title-color, none);
+                            }
+                        }
+                    }
+
+                    .blog_right-cmt {
+                        @include font($font, 1.6rem, 500, 1.6rem);
+                        color: $primary-color;
+
+                        span {
+                            font-style: italic;
+                            color: $title-color;
+                        }
+                    }
+
+                    .blog_tags-list {
+                        padding: 0;
+                        margin: 0;
+                        display: flex;
+                        flex-wrap: wrap;
+
+                        .blog_tags-item {
+                            list-style: none;
+                            margin: 6px 8px;
+
+                            .blog_tags-link {
+                                text-decoration: none;
+                                @include font($font, 1.6rem, 500, 1.6rem);
+                                color: $primary-color;
+
+                                span {
+                                    color: $title-color;
+
+                                    &:hover {
+                                        @include hover(none, $primary-color);
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+
+                }
+            }
+        }
+        
+    }
+}

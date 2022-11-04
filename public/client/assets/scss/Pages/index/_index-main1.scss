@@ -1,0 +1,66 @@
+main {
+    .home {
+        .home_main1 {
+            background-color: rgba(136, 180, 78, 0.05);
+            background-image: url('../image/index/leaf.png');
+
+            .home_main1-left {
+                img {
+                    width: 630px;
+                    height: 100%;
+                }
+            }
+
+            .home_main1-right {
+
+                .home_main1-content {
+
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    margin: 0 50px;
+
+                    .main1-sub {
+                        margin-bottom: 35px;
+                    }
+
+                    a {
+                        @include font($font, 2rem, 500, none);
+                        text-decoration: none;
+
+                        .main1-hover {
+                            background-color: $primary-color;
+
+                            &:hover {
+                                @include hover($title-color, none);
+                            }
+                        }
+                    }
+
+                    .main1_block {
+                        .main1_item {
+                            list-style: none;
+                            display: flex;
+                            align-items: center;
+                            margin: 35px 0;
+
+                            .main1_info {
+                                @include font($font, 1.8rem, 700, none);
+                                margin-left: 30px;
+
+                            }
+
+                        }
+                    }
+
+                    .main1_link {
+                        padding: 20px 0 50px;
+                    }
+
+                }
+
+
+            }
+        }
+    }
+}

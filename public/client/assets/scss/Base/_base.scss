@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    background-color: $text-color;
+    box-sizing: border-box;
+    font-family: 'Playfair Display', serif;
+    @include respond(tab-land){
+        font-size: 56.25%;
+    }
+    @include respond(tab-port) {
+        font-size: 50%;
+    }
+    @include respond(big-desktop) {
+        font-size: 75%;
+    }
+}
+
+body {
+    overflow-x: hidden;
+}
+

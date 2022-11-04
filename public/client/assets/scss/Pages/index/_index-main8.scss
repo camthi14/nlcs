@@ -1,0 +1,204 @@
+main {
+    .home {
+        .home_main8 {
+            .main8_top {
+                padding: 90px 0;
+                background-color: rgba(136, 180, 78, 0.05);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .main8_content {
+                background-color: rgba(136, 180, 78, 0.05);
+
+                .main8_content-list {
+                    padding: 0 27px;
+                    margin: 0 auto;
+                    margin-bottom: 0;
+
+                    .main8_content-item {
+                        margin: 0 18px;
+                        width: 372px;
+                        padding: 0;
+                        list-style: none;
+                        display: flex;
+                        flex-direction: column;
+                        border-bottom: 5px solid $text-color;
+                        border-radius: 2px;
+                        overflow: hidden;
+                        background-color: $text-color;
+                        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+                        .main8_content-link {
+                            display: inline-block;
+                            text-decoration: none;
+
+
+                            .content-img {
+                                margin-bottom: 20px;
+                                overflow: hidden;
+                                height: 230px;
+
+
+                                img {
+                                    width: 100%;
+                                    height: 100%;
+                                    transform: scale(1);
+                                    transition: transform 0.5s;
+                                }
+
+                                img:hover {
+                                    transform: scale(1.2);
+                                }
+                            }
+
+                            .content-about {
+                                @include font($font, 1.4rem, 400, 1.4rem);
+                                color: $primary-color;
+                                padding-left: 20px;
+                                font-style: italic
+                            }
+
+                            .content-title {
+                                @include font($font-title, 2.4rem, 700, 2.4rem);
+                                color: $title-color;
+                                width: 100%;
+                                white-space: nowrap;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                margin: 10px 0 20px;
+                                padding: 0 20px;
+
+                                &:hover {
+                                    @include hover(none, $primary-color);
+                                }
+
+                            }
+                        }
+
+                        .content-sub {
+                            color: $title-color;
+                            @include font($font, 1.4rem, 400, 1.4);
+                            text-align: justify;
+                            padding: 0 20px;
+                        }
+
+                        .content-calendar {
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-between;
+                            align-items: center;
+                            height: 70px;
+                            margin: 30px 20px 0;
+                            color: $title-color;
+                            border-top: 1px solid #ccc;
+                            @include font($font, 1.4rem, 400, 1.4);
+
+                            .content-month {
+                                display: flex;
+                                font-weight: bold;
+                            }
+
+                            .content-info {
+                                display: flex;
+
+                                div {
+                                    i {
+                                        color: $primary-color;
+                                    }
+                                }
+
+                                .content-view {
+                                    padding-left: 30px;
+                                }
+                            }
+                        }
+
+                        &:hover {
+                            background-color: rgba(136, 180, 78, 0.1);
+                            border-bottom: 5px solid $primary-color;
+                        }
+                    }
+                }
+
+                .main8_read-more {
+                    padding: 60px 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    a {
+                        text-decoration: none;
+                        @include font($font, 2rem, 500, none);
+
+                        .main8-hover {
+                            @include hover($primary-color, $text-color);
+
+                            &:hover {
+                                @include hover($title-color, $text-color );
+                            }
+                        }
+                    }
+                }
+            }
+
+            .main8_bottom {
+                height: 165px;
+
+
+                .main8_list {
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 30px;
+
+                    .main8_item {
+                        list-style: none;
+                        padding-left: 0;
+                        position: relative;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        width: 160px;
+                        height: 105px;
+                        overflow: hidden;
+
+                        .item-img1 {
+                            max-width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            position: absolute;
+                            top: 0;
+                            transition: top .2s ease-in-out;
+
+                        }
+
+                        .item-img2 {
+                            max-width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            position: absolute;
+                            top: 105px;
+                            transition: top .2s ease-in-out;
+
+
+                        }
+
+                        &:hover {
+                            .item-img1 {
+                                top: -105px;
+                            }
+
+                            .item-img2 {
+                                top: 0;
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,107 @@
+main {
+    .slider {
+
+        .slider-item {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            padding-bottom: 90px;
+            background-color: $text-color;
+            z-index: 1;
+
+
+            .home_bg-content {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding-left: 30px;
+
+                .home_bg-title {
+                    @include font($font-title, 7.2rem, none, 1.2);
+                    color: $title-color;
+                }
+
+                .home_bg-sub {
+                    @include font($font, 2rem, 300, 1.4);
+                    color: $desc-color;
+                    margin: 55px 0 85px;
+
+                }
+
+                a {
+                    text-decoration: none;
+                    @include font($font, 2rem, 500, none);
+
+                    .bg-hover {
+                        background-color: $primary-color;
+
+                        &:hover {
+                            @include hover($title-color, none);
+                        }
+                    }
+                }
+
+
+            }
+
+            .home_bg-img {
+                img {
+                    width: 600px;
+                    height: 600px;
+                    object-fit: cover;
+                }
+            }
+        }
+
+        /*-----------owl-carousel----------------*/
+
+        .owl-prev,
+        .owl-next {
+            display: none !important;
+        }
+
+        .owl-dots {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin-bottom: 60px;
+
+            .owl-dot {
+                width: 30px !important;
+                height: 30px !important;
+                border-radius: 50%;
+                border: 2px solid transparent;
+                margin: 0 5px;
+
+
+
+
+                span {
+                    margin: 5px;
+                    width: 15px;
+                    height: 15px;
+                    background-color: $title-color;
+                }
+
+                &:hover {
+                    span {
+                        background-color: $primary-color;
+                    }
+                }
+            }
+
+            .owl-dot.active {
+                border: 2px solid $primary-color;
+
+                span {
+                    background-color: $primary-color;
+
+                }
+            }
+
+        }
+
+    }
+    
+}

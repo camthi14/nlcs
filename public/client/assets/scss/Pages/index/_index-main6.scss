@@ -1,0 +1,142 @@
+main {
+    .home {
+        .home_main6 {
+            margin-top: 60px;
+
+            .main6_top {
+                background-image: url('../image/index/customers-bg-gray.jpg');
+                background-size: cover;
+
+                .main6_content {
+                    background: url('../image/index/customers-bg.png') no-repeat;
+                    background-size: contain;
+                    display: block;
+                    text-align: center;
+                    margin: 60px auto 0;
+                    max-width: 800px;
+
+
+                    .mount {
+                        @include font($font, 20rem, 700, 1);
+                        color: $primary-color;
+                    }
+
+                    .main6_title {
+                        @include font($font-title, 7.2rem, 700, 1.2);
+                        color: $title-color;
+                    }
+
+                    .main6_sub {
+                        color: $title-color;
+                        @include font($font, 2rem, 300, 1.4);
+                        margin-bottom: 60px;
+
+                    }
+                }
+            }
+
+            .advertisement {
+                background-color: $primary-color;
+                display: flex;
+                align-items: center;
+
+                padding: 0 60px;
+                height: 160px;
+
+                .advertisement-content {
+                    color: $text-color;
+                    @include font($font, 1.8rem, 400, 1.4);
+                }
+
+                .advertisement-phone {
+                    display: flex;
+                    justify-content: end;
+                    align-items: center;
+
+                    img {
+                        width: 69px;
+                        height: 69px;
+                    }
+
+                    span {
+                        color: $text-color;
+                        @include font($font, 3rem, 500, none);
+                        padding-left: 30px;
+                    }
+                }
+
+                .advertisement_read-more {
+                    display: flex;
+                    justify-content: end;
+                    align-items: center;
+
+                    a {
+                        text-decoration: none;
+                        @include font($font, 2rem, 500, none);
+
+                        .advertisement-hover {
+                            @include hover($title-color, $text-color);
+
+                            &:hover {
+                                @include hover($text-color, $title-color );
+                            }
+                        }
+                    }
+                }
+            }
+
+            .main6_content {
+                background: url('../image/index/tea-bg.png') no-repeat;
+                background-size: contain;
+                padding: 30px;
+                margin-top: 90px;
+                align-items: center;
+
+                .main6_content-left {
+                    padding-right: 60px;
+                    display: flex;
+                    flex-direction: column;
+
+                    .main6_title {
+                        @include font($font-title, 4rem, 700, 1.2);
+                        color: $title-color;
+                    }
+
+                    .main6_sub {
+                        @include font($font, 2rem, 300, 1.4);
+                        color: $title-color;
+                        margin: 45px 0;
+                    }
+
+                    .main6_read-more {
+                        margin-top: 25px;
+
+                        a {
+                            text-decoration: none;
+                            @include font($font, 2rem, 500, none);
+
+                            .main6-hover {
+                                @include hover($primary-color, $text-color);
+
+                                &:hover {
+                                    @include hover($title-color, $text-color );
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .main6_content-right {
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+
+        }
+
+
+
+    }
+}

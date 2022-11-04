@@ -1,0 +1,359 @@
+.modal_cart {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99999;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: end;
+    visibility: hidden;
+    transition: all ease-in .4s;
+
+    .modal_container {
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 400px;
+        background-color: $text-color;
+        min-height: 200px;
+        transition: all ease-in .4s;
+        transform: translateX(100%);
+
+
+        .cart-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 8vh;
+            border-top: 1px solid $desc-color;
+            border-bottom: 1px solid $desc-color;
+            color: $title-color;
+
+            .close {
+                @include font($font, 1.4rem, 400, 4.5rem);
+                padding: 0 15px;
+                height: 100%;
+                border: none;
+                border-right: 1px dashed $desc-color;
+                background-color: transparent;
+
+                &:hover {
+                    color: $primary-color;
+                }
+
+            }
+
+            .cart-title {
+                @include font($font, 1.8rem, 700, 1.8rem);
+                text-transform: uppercase;
+                margin-bottom: 0;
+            }
+
+            .amount {
+                @include font($font, 1.4rem, 400, 4.5rem);
+                padding: 0 15px;
+                height: 100%;
+                border-left: 1px dashed $desc-color;
+            }
+        }
+
+        .cart_body {
+            height: 100%;
+            overflow-y: auto;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+
+            .cart-empty {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                color: $title-color;
+                display: none;
+
+                .cart-content {
+                    padding: 20px 0;
+                    @include font($font, 1.4rem, 400, none);
+                }
+
+                .cart-shop-btn {
+                    width: 200px;
+                    height: 45px;
+                    @include font($font, 1.4rem, 500, none);
+                    border: none;
+                    @include hover($title-color, $text-color);
+                    text-transform: uppercase;
+
+                    &:hover {
+                        @include hover($primary-color, $title-color);
+                    }
+                }
+            }
+
+            .cart_pro-list {
+                height: 80vh;
+
+                .cart_pro-item {
+                    list-style: none;
+                    padding: 20px 0;
+                    border-bottom: 1px solid #ccc;
+
+                    .cart_pro-link {
+                        display: flex;
+                        flex-direction: row;
+                        text-decoration: none;
+                        padding: 5px 20px;
+                        cursor: auto;
+
+
+                        .cart_product-img {
+                            img {
+                                border: 1px solid $title-color;
+                                border-radius: 2px;
+                                object-fit: cover;
+                                width: 74px;
+                                height: 74px;
+                            }
+                        }
+
+                        .cart_product-info {
+                            display: flex;
+                            flex-direction: column;
+                            margin-left: 20px;
+
+                            .cart_product-name,
+                            .cart_product-price {
+                                @include font($font, 1.6rem, bold, 1.6rem);
+                                color: $title-color;
+                            }
+
+                            .cart_product-price {
+                                font-weight: 300;
+                                margin: 12px 0;
+                                text-align: start;
+                            }
+
+                            .cart_product-mount {
+                                @include font($font, 1.4rem, 300, 1.4rem);
+                                color: $title-color;
+                                display: grid;
+                                grid-template-columns: 1fr 2fr 1fr;
+                                width: 120px;
+                                height: 30px;
+                                text-align: center;
+                                border: 1px solid $title-color;
+
+                                .mount-ex {
+                                    border: none;
+                                    background-color: transparent;
+                                    border-right: 1px solid $title-color;
+                                    height: 100%;
+
+                                    &:hover {
+                                        opacity: 0.8;
+                                        background-color: rgba(0, 0, 0, 0.5);
+                                    }
+                                }
+
+                                .mount-number {
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    cursor: text;
+
+                                }
+
+                                .mount-re {
+                                    border: none;
+                                    background-color: transparent;
+                                    border-left: 1px solid $title-color;
+
+                                    &:hover {
+                                        opacity: 0.8;
+                                        background-color: rgba(0, 0, 0, 0.5);
+                                    }
+                                }
+
+
+
+                            }
+
+
+                        }
+
+                        &:hover {
+                            background-color: rgba(0, 0, 0, 0.05);
+                            border-radius: 2px;
+                        }
+
+                    }
+                }
+            }
+
+
+
+
+        }
+
+        .cart_footer {
+            height: 7vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+
+            .view-cart,
+            .check-out {
+                width: 100%;
+                height: 45px;
+                border: none;
+                @include hover($title-color, $text-color);
+                text-transform: uppercase;
+                cursor: pointer;
+                opacity: 1;
+
+                &:hover {
+                    opacity: 0.8;
+                }
+            }
+
+            .check-out {
+                @include hover(#1c2124, $text-color);
+            }
+        }
+    }
+
+}
+
+.modal_cart.open-cart {
+    visibility: visible;
+}
+
+// .cart {
+//     width: 50%;
+//     padding-bottom: 12px;
+//     font-size: 1.6rem;
+//     position: fixed;
+//     height: 100vh;
+//     width: 400px;
+//     right: 0;
+//     top: 0;
+//     background-color: $text-color;
+//     z-index: 999999999;
+//     transition: all ease-in .4s;
+
+//     // right: -100%;
+//     .cart-top {
+//         display: flex;
+//         align-items: center;
+//         justify-content: space-between;
+//         height: 8vh;
+//         border-top: 1px solid $desc-color;
+//         border-bottom: 1px solid $desc-color;
+//         color: $title-color;
+
+//         .close {
+//             @include font($font, 1.4rem, 400, 4.5rem);
+//             padding: 0 15px;
+//             height: 100%;
+//             border: none;
+//             border-right: 1px dashed $desc-color;
+//             background-color: transparent;
+
+//             &:hover {
+//                 color: $primary-color;
+//             }
+
+//         }
+
+//         .cart-title {
+//             @include font($font, 1.8rem, 700, 1.8rem);
+//             text-transform: uppercase;
+//             margin-bottom: 0;
+//         }
+
+//         .amount {
+//             @include font($font, 1.4rem, 400, 4.5rem);
+//             padding: 0 15px;
+//             height: 100%;
+//             border-left: 1px dashed $desc-color;
+//         }
+//     }
+
+//     .form-cart {
+//         height: 100%;
+//         overflow-y: auto;
+
+//         &::-webkit-scrollbar {
+//             display: none;
+//         }
+
+//         .table-cart {
+//             width: 100%;
+
+//             h2 {
+//                 margin-bottom: 20px;
+//             }
+
+//             thead {
+//                 tr {
+//                     th {
+//                         &:first-child {
+//                             text-align: left;
+//                         }
+//                     }
+//                 }
+//             }
+
+//             tbody {
+
+
+//                 tr {
+//                     td {
+//                         border-bottom: 1px solid #ddd;
+//                         padding: 12px 0;
+//                     }
+//                 }
+
+
+//             }
+//         }
+
+//     }
+
+//     .cart_footer {
+//         height: 7vh;
+//         width: 400px;
+//         display: grid;
+//         grid-template-columns: 1fr 1fr;
+//         position: fixed;
+//         right: 0;
+//         bottom: 0;
+
+//         .view-cart,
+//         .check-out {
+//             width: 100%;
+//             height: 45px;
+//             border: none;
+//             @include hover($title-color, $text-color);
+//             text-transform: uppercase;
+//             cursor: pointer;
+//             opacity: 1;
+
+//             &:hover {
+//                 opacity: 0.8;
+//             }
+//         }
+
+//         .check-out {
+//             @include hover(#1c2124, $text-color);
+//         }
+//     }
+// }

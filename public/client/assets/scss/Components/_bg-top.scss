@@ -1,0 +1,86 @@
+main {
+    .bg_top {
+        background-image: url('../image/tea/tea.jpg');
+        height: 60vh;
+        background-size: cover;
+
+
+        .bg_top-content {
+            background-color: rgba(0, 0, 0, 0.35);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+
+
+            .bg_top-title {
+                @include font($font-title, 7.2rem, 700, 7.2rem);
+                color: $text-color;
+            }
+
+            .bg_top-info {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 45px;
+
+
+                .bg_top-link {
+                    text-decoration: none;
+                    @include font($font, 3rem, 700, 3rem);
+                    color: $primary-color;
+                }
+
+                .bg_top-chevron {
+                    color: $primary-color;
+                    font-size: 1.8rem;
+                    transform: rotate(-90deg);
+                    margin-left: 30px;
+                    margin-top: 4px;
+                }
+
+                .bg_top-sub {
+                    @include font($font, 3rem, 700, 3rem);
+                    color: $text-color;
+                    padding-left: 30px;
+                    margin: 0;
+                }
+            }
+
+        }
+        
+    }
+    @include respond(tab-land){
+        .bg_top {
+            height: 50vh;
+            background-size: cover;
+    
+    
+            .bg_top-content {
+                .bg_top-title {
+                    @include font($font-title, 5rem, 500, 5rem);
+                }
+    
+                .bg_top-info {
+                    margin-top: 25px;
+                    .bg_top-link {
+                        @include font($font, 2rem, 500, 2rem);
+                    }
+    
+                    .bg_top-chevron {
+                        font-size: 1.4rem;
+                    }
+    
+                    .bg_top-sub {
+                        @include font($font, 2rem, 500, 2rem);
+                    }
+                }
+    
+            }
+    
+        }  
+    }
+    
+}

@@ -1,0 +1,116 @@
+main {
+    .home {
+        .home_main3 {
+            background-image: url('../image/index/main3-bg.png');
+
+            .main3_top {
+                margin: 90px 0;
+                height: 145px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                .main3-sub {
+                    text-align: center;
+                    padding: 0 120px;
+                }
+            }
+
+            .main3_content {
+                padding: 0 30px 30px 10px;
+                position: relative;
+
+                .main3_swipe-link {
+                    text-decoration: none;
+                    display: block;
+                    margin: 0 0 0 20px;
+                    box-shadow: 0 25px 45px rgb(1 2 2 / 12%);;
+
+
+                    .main3_swipe-bg {
+                        height: 320px;
+
+                        img {
+                            width: 100%;
+                            height: 260px;
+                            object-fit: cover;
+
+                        }
+                    }
+
+                    .main3_swipe-content {
+                        background-color: $text-color;
+                        position: absolute;
+                        left: 50%;
+                        transform: translateX(-47%);
+                        bottom: 0;
+                        width: 315px;
+                        height: 128px;
+                        border-radius: 2px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+                        .main3_swipe-title {
+                            @include font($font-title, 3rem, 700, 3rem);
+                            color: $title-color;
+                            margin-bottom: 12px;
+                            text-align: center;
+
+                            &:hover {
+                                @include hover(none, $primary-color);
+                            }
+                        }
+
+                        .main3_swipe-sub {
+                            color: $title-color;
+                            @include font($font, 1.4rem, 300, 1.4);
+                            text-align: center;
+                        }
+                    }
+
+                    .main3_swipe-logo {
+                        position: absolute;
+                        left: 28px;
+                        top: 16px;
+                    }
+
+                }
+
+                .owl-nav {
+                    display: flex;
+                    justify-content: center;
+                    padding-top: 20px;
+
+                    // position: absolute;
+                    // bottom: 0;
+                    // transform: translateX(50%);
+
+                    .owl-prev {
+                        margin-right: 10px;
+                        font-size: 2.4rem !important;
+                        color: $text-color  !important;
+                        width: 70px;
+                        height: 70px;
+                        border-radius: 50% !important;
+                        background-color: $primary-color  !important;
+                    }
+
+                    .owl-next {
+                        font-size: 2.4rem !important;
+                        color: $text-color  !important;
+                        width: 70px;
+                        height: 70px;
+                        border-radius: 50% !important;
+                        background-color: $primary-color  !important;
+                    }
+                }
+
+            }
+        }
+
+    }
+}

@@ -1,0 +1,89 @@
+main {
+    .home {
+        .home_main2 {
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+            padding-top: 90px;
+
+            .main2_top {
+                height: 145px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                .main2-sub {
+                    text-align: center;
+                    padding: 0 120px;
+                }
+
+
+            }
+
+            .main2_content {
+                padding: 90px 30px;
+
+                .main2_block {
+                    display: flex;
+                    flex-direction: column;
+
+                    .main2_item {
+                        list-style: none;
+                        display: flex;
+                        flex-direction: row;
+                        margin: 30px 0;
+                        width: 100%;
+
+
+                        .main2_item-img {
+                            width: 100px;
+                            height: 100px;
+                            border-radius: 50%;
+                            background-color: $primary-color;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+
+                        }
+
+                        .main2_item-right {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            color: $title-color;
+                            flex: 3;
+
+
+                            .item-title {
+                                @include font($font-title, 1.8rem, 600, 1.8rem);
+                                margin-bottom: 10px;
+                            }
+
+                            .item-sub {
+                                @include font($font, 1.6rem, 300, 1.4);
+                            }
+                        }
+
+                        .main2_item1-right {
+                            margin-left: 30px;
+
+                        }
+
+                        .main2_item2-right {
+                            text-align: end;
+                            margin-right: 30px;
+
+                        }
+
+                    }
+                }
+
+                .main2_img {
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

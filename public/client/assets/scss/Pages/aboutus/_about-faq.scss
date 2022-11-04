@@ -1,0 +1,44 @@
+main {
+    .about_faq {
+        .bg_top {
+            background-image: url('../image/about/faq.png');
+            background-position: -200px;
+            height: 450px;
+        }
+
+        .about_faq-main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 90px;
+
+            .about_faq-content {
+                margin: 30px 0;
+                padding: 30px;
+                width: 1000px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                background-image: url('../image/index/customers-bg.png');
+
+                .about_faq-title {
+                    @include font($font-title, 3.2rem, 700, 3.2rem);
+                    color: $title-color;
+                    margin: 20px 0;
+                }
+
+                .about_faq-sub {
+                    @include font($font, 1.6rem, 300, 1.4);
+                    color: $title-color;
+
+                    li {
+                        list-style: none;
+
+                    }
+                }
+
+            }
+        }
+    }
+
+}

@@ -1,0 +1,150 @@
+main {
+    .home {
+        .home_main7 {
+            background-image: url('../image/tea/tea.jpg');
+            background-attachment: fixed;
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            .home_main7-container {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                .home_main7-top {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    margin-top: 90px;
+
+                    .home_main-title {
+                        color: $text-color;
+                    }
+                }
+
+                .main7_content {
+                    position: relative;
+
+                    .main7_content-item {
+                        margin: 120px 0;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+
+                        .content_body-item {
+                            text-align: center;
+                            max-height: 60vh;
+                            max-width: 50vw;
+                            padding: 40px 50px;
+                            border-radius: 2px;
+                            background-color: $text-color;
+                            background-image: url('../image/index/leaf.png');
+
+
+                            .content_body-name {
+                                @include font($font, 3rem, 700, none);
+                                color: $primary-color;
+                            }
+
+                            .content_body-job {
+                                @include font($font, 1.6rem, 400, 1.6rem);
+                                font-style: italic;
+                                color: $title-color;
+                                margin: 15px 0 30px;
+                            }
+
+                            .content_body-sub {
+                                @include font($font, 1.8rem, 300, 1.4);
+                                color: $desc-color;
+                                text-align: center;
+                            }
+
+                            .quote {
+                                font-size: 3.2rem;
+                                color: $primary-color;
+                                display: block;
+                                text-align: center;
+                            }
+                        }
+                    }
+
+                    /*--------owl-nav & owl-dots------*/
+                    .owl-nav {
+
+                        .owl-prev {
+                            position: absolute;
+                            left: 17vw;
+                            top: 45%;
+                            transform: translateY(-50%);
+                            font-size: 2.4rem !important;
+                            color: $text-color  !important;
+                            width: 50px;
+                            height: 50px;
+                            border-radius: 50% !important;
+                            background-color: $primary-color  !important;
+                        }
+
+                        .owl-next {
+                            position: absolute;
+                            right: 17vw;
+                            top: 45%;
+                            transform: translateY(-50%);
+                            font-size: 2.4rem !important;
+                            color: $text-color  !important;
+                            width: 50px;
+                            height: 50px;
+                            border-radius: 50% !important;
+                            background-color: $primary-color  !important;
+                        }
+                    }
+
+                    .owl-dots {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        .owl-dot {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            width: 50px;
+                            height: 50px;
+                            border-radius: 50%;
+                            border: 3px solid $primary-color;
+                            margin-right: 15px;
+
+
+                            span {
+                                width: 100%;
+                                height: 100%;
+                                border-radius: 50%;
+                                margin: 0;
+                                background-position: center;
+                                background-repeat: no-repeat;
+                                background-size: cover;
+
+                            }
+
+                            &.active {
+                                border: 3px solid $text-color;
+                                width: 80px;
+                                height: 80px;
+                                border-radius: 50%;
+                            }
+                        }
+
+
+                    }
+
+                }
+            }
+        }
+    }
+}

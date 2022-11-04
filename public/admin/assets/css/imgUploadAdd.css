@@ -1,0 +1,47 @@
+.input-upload-img {
+    display: block;
+    width: 150px;
+    background: radial-gradient(rgba(0, 0, 0, 0.5), transparent);
+    cursor: pointer;
+    height: 110px;
+    border-radius: 12px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.25s ease-in-out;
+}
+
+.img1 {
+    height: 110px;
+    width: 150px;
+    border-radius: 12px;
+    max-width: 100%;
+    object-fit: cover;
+    object-position: center;
+    margin-top: 17px;
+    border: 1px solid #999;
+
+}
+
+
+.input-upload-img:hover {
+    opacity: 0.7;
+}
+
+.preview-img {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.preview-img-multiple {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.preview-img img, .preview-img-multiple img {
+    width: 150px;
+    border-radius: 12px;
+}

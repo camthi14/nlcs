@@ -1,0 +1,211 @@
+main {
+    .gallery {
+        .gallery_container {
+            padding: 90px 30px;
+
+            .gallery_container-item {
+                padding: 10px;
+
+                .gallery_content {
+                    position: relative;
+                    overflow: hidden;
+
+                    .gallery_content-link {
+                        img {
+                            width: 100%;
+                            height: 300px;
+                            object-fit: cover;
+                            transform: scale(1);
+                            transition: transform .5s ease-in;
+                        }
+                    }
+
+                    .gallery_bg-body {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        z-index: 2;
+                        visibility: hidden;
+
+                        .gallery_content-body {
+                            @include font($font, 1.4rem, 300, 1.2);
+                            padding: 15px;
+                            height: 100%;
+                            color: $text-color;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+
+                            .body-top {
+                                display: flex;
+                                justify-content: space-between;
+
+                                .body-top-left {
+                                    .body-date {
+                                        font-style: italic;
+                                    }
+
+                                    .body-category {
+                                        display: flex;
+                                        padding: 0;
+                                        margin: 0;
+                                        @include font($font, 1.4rem, 600, none);
+                                        text-shadow: 5px 2px 15px $text-color;
+                                        color: $title-color;
+
+
+                                        .category-item {
+                                            padding-right: 20px;
+                                            margin-top: 6px;
+
+                                            &:first-child {
+                                                list-style: none;
+
+                                            }
+
+                                            &:hover {
+                                                text-decoration: underline $title-color solid;
+                                                cursor: pointer;
+                                            }
+                                        }
+
+
+                                    }
+                                }
+
+                                .body-top-right {
+                                    display: flex;
+                                    flex-direction: column;
+                                    @include font($font, 2rem, none, none);
+                                    position: relative;
+
+
+
+                                    .btn-item {
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        border: none;
+                                        background-color: $text-color;
+                                        color: $title-color;
+                                        margin-bottom: 5px;
+                                        outline: none;
+                                        width: 45px;
+                                        height: 45px;
+                                        border-radius: 50%;
+
+                                        .note {
+                                            position: absolute;
+                                            display: flex;
+                                            align-items: center;
+                                            border-radius: 3px;
+                                            padding: 0 12px;
+                                            @include font($font, 1.6rem, 400, 1.6rem);
+                                            right: 55px;
+                                            max-width: 70px;
+                                            height: 45px;
+                                            background-color: $text-color;
+                                            visibility: hidden;
+
+                                            &::before {
+                                                content: '';
+                                                position: absolute;
+                                                top: 17px;
+                                                right: -8px;
+                                                width: 0;
+                                                height: 0;
+                                                border-top: 5px solid transparent;
+                                                border-left: 10px solid $text-color;
+                                                border-bottom: 5px solid transparent;
+                                            }
+                                        }
+
+                                        i {
+                                            padding-top: 2px;
+                                        }
+
+                                        &:hover {
+                                            background-color: $primary-color;
+
+                                            .note {
+                                                visibility: visible;
+                                                color: $title-color;
+
+                                            }
+
+                                            i {
+                                                color: $text-color;
+                                            }
+
+
+                                        }
+                                    }
+                                }
+
+                            }
+
+
+                            .body-info {
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                cursor: text;
+                                color: $text-color;
+
+                                .body-title {
+                                    width: 50%;
+                                    white-space: nowrap;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                    @include font($font, 1.8rem, 700, 1.8rem);
+                                    text-shadow: 5px 2px 4px $title-color;
+                                    padding-bottom: 5px;
+                                    margin-top: 4px;
+                                }
+
+                                .body-view {
+                                    i {
+                                        margin-left: 6px;
+                                        color: $primary-color;
+                                    }
+                                }
+                            }
+
+                        }
+
+                    }
+
+                    &:hover {
+
+                        .gallery_bg-body {
+                            cursor: pointer;
+                            visibility: visible;
+                        }
+                    }
+
+                }
+
+                &:hover .gallery_content-link {
+                    img {
+                        transform: scale(1.1);
+                    }
+                }
+                
+            }
+
+        }
+        @include respond(tab-land){
+            .gallery_container{
+                padding: 30px;
+            }
+        }
+        @include respond(phone){
+            .gallery_container{
+                padding: 30px 15px;
+            }
+        }
+        
+    }
+}

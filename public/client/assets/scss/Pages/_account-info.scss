@@ -1,0 +1,134 @@
+main {
+    .container {
+        width: 1200px;
+        .account_content {
+            box-shadow: 0 25px 45px #0102021f;
+            margin: 30px 0;
+
+            .account_left {
+                text-align: center;
+                @include font($font, 1.6rem, 400, 1.4);
+                color: $title-color;
+                border-right: 1px solid $title-color;
+                max-width: 400px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 30px;
+
+                .account_img {
+                    max-width: 200px;
+                    max-height: 200px;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    box-shadow: 0 25px 45px #0102021f;
+
+                    img {
+                        max-width: 200px;
+                        max-height: 200px;
+                        object-fit: cover;
+                    }
+                }
+
+                .account_name {
+                    @include font($font-title, 3rem, 400, 1.4);
+                    color: $title-color;
+                }
+
+                .account_email {
+                    font-style: italic;
+                }
+
+                input {
+                    padding: 8px 20px;
+                    background-color: $title-color;
+                    color: $text-color;
+                    border: none;
+                    outline: none;
+
+                    &:hover {
+                        opacity: 0.8;
+                    }
+                }
+            }
+
+            .account_right {
+                padding: 30px;
+                @include font($font, 1.6rem, 400, 1.4);
+
+                h3 {
+                    @include font($font-title, 3rem, 400, 1.4);
+                    color: $title-color;
+                }
+
+                p {
+                    span {
+                        font-weight: bold;
+
+                    }
+                }
+
+                img {
+                    max-width: 400px;
+                    max-height: 400px;
+                    object-fit: cover;
+                }
+            }
+        }
+
+        @include respond(phone) {
+            .account_content {
+                .account_left {
+                    border-right: none;
+
+                    .account_name {
+                        @include font($font-title, 2.4rem, 400, 1.4);
+                    }
+                }
+
+                .account_right {
+                    padding: 30px;
+
+                    h3 {
+                        @include font($font-title, 2rem, 400, 1.4);
+                        color: $title-color;
+                    }
+
+                    p {
+                        span {
+                            font-weight: bold;
+
+                        }
+                    }
+
+                    img {
+                        max-width: 100%;
+                        max-height: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+//info Order
+.info_order{
+    padding: 15px;
+    .info_status {
+            font-size: 1.6rem;
+            button{
+                padding: 12px;
+            }
+            .btn_status{
+                border-bottom: 2px solid $primary-color;
+            }
+            
+        }
+    
+        .table_order {
+            font-size: 1.6rem;
+        }
+}

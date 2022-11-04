@@ -1,0 +1,269 @@
+main {
+    .contact {
+        .contact_main {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+
+            .contact_main-title {
+                position: absolute;
+                left: 0;
+                top: 0;
+                right: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding-top: 60px;
+
+                .contact_main-name {
+                    @include font($font-title, 4.5rem, 700, 4.5rem);
+                    color: $title-color;
+                    margin: 4px 0;
+                }
+
+            }
+
+            .contact_main-img {
+
+                width: 100%;
+                height: 600px;
+
+            }
+            .contact_main-content {
+
+                .contact_central {
+                    background-image: url('../image/index/leaf.png');
+                    padding: 90px 30px 0;
+
+                    .contact_title {
+                        @include font($font-title, 3rem, 700, 3rem);
+                        color: $title-color;
+                    }
+
+                    .contact_sub {
+                        @include font($font, 1.6rem, 300, 1.6);
+                        color: $title-color;
+                        margin: 45px 0;
+
+                    }
+
+                    .contact_icon-list {
+
+
+                        .contact_icon-item {
+                            padding-left: 0;
+                            list-style: none;
+                            margin: 15px 0;
+
+                            .contact_icon-link {
+                                text-decoration: none;
+                                @include font($font, 1.6rem, 500, 1.6rem);
+                                color: $primary-color;
+
+                                span {
+                                    padding-left: 15px;
+                                    color: $title-color;
+                                }
+
+                                &:hover {
+                                    opacity: 0.8;
+                                }
+                            }
+                        }
+                    }
+
+                    .contact_list {
+                        display: flex;
+                        padding-left: 0;
+
+                        .contact_item {
+                            list-style: none;
+                            margin-left: 20px;
+                            @include font($font, 2rem, 400, none);
+                            background-color: $primary-color;
+                            padding: 16px;
+                            border-radius: 50%;
+
+                            .contact_link {
+                                text-decoration: none;
+                                color: $text-color;
+
+
+                            }
+
+                            &:hover {
+                                @include hover($title-color, $text-color);
+                            }
+                        }
+                    }
+                }
+
+                .contact_open {
+                    background-image: url('../image/index/leaf.png');
+                    padding: 90px 30px 0;
+
+                    .contact_title {
+                        @include font($font-title, 3rem, 700, 3rem);
+                        color: $title-color;
+                        margin-bottom: 45px
+                    }
+
+                    .contact_open-sub {
+                        @include font($font, 1.6rem, 400, 1.6);
+                        color: $title-color;
+                    }
+
+                }
+
+                .contact_info-table {
+                    background-color: rgb(245, 248, 242);
+                    padding: 90px 30px 0;
+
+                    .contact_info-form {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        @include font($font, 1.6rem, 400, 1.6);
+                        color: $title-color;
+
+                        .contact_info-content {
+                            display: flex;
+                            flex-direction: column;
+                            margin-top: 45px;
+
+                            .contact_info-label {
+                                margin-bottom: 6px;
+                            }
+
+                            .contact_info-input {
+                                height: 64px;
+                                width: 280px;
+                                border-radius: 36px;
+                                border: 1px solid $primary-color;
+                                outline: none;
+                                padding: 0 30px;
+                                background-image: url('../image/index/customers-bg.png');
+
+                                &::placeholder {
+                                    @include font($font, 1.6rem, 300, 1.6rem);
+                                    color: $title-color;
+                                }
+                            }
+
+                            .contact_info-mes {
+                                height: 145px;
+                                width: 280px;
+                                border-radius: 20px;
+                                border: 1px solid $primary-color;
+                                outline: none;
+                                padding: 30px;
+                                background-image: url('../image/index/customers-bg.png');
+                            }
+                        }
+
+
+
+                        .contact_info-submit {
+                            margin: 45px 0;
+                            border: none;
+                            @include font($font, 1.6rem, 400, 1.6);
+                            @include hover($primary-color, $text-color);
+                            text-transform: uppercase;
+
+                            &:hover {
+                                background-color: $title-color;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+                
+            }
+        }
+        @include respond(tab-land){
+            .contact_main{
+
+                .contact_main-content{
+                    .contact_central {
+                        .contact_list{
+                            .contact_item {
+                                margin-left: 12px;
+                                padding: 12px;
+                            } 
+                        }
+        
+                    }
+                    .contact_info-table {
+                        padding-top: 20px;
+        
+                        .contact_info-form {
+        
+                            .contact_info-content {
+                                width: 100%;
+                                margin-top: 15px;
+        
+                                .contact_info-label {
+                                    margin-bottom: 6px;
+                                }
+        
+                                .contact_info-input {
+                                    width: 100%;
+                                    height: 45px;
+                                }
+                                .contact_info-mes {
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+    
+                }
+            }
+        }
+        @include respond(phone){
+            .contact_main{
+                .contact_main-title {
+                    display: none;
+
+                }
+                .contact_main-img {
+                    display: none;
+
+                }
+                .contact_main-content{
+
+                    .contact_central{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        padding-top: 30px;
+                        .contact_sub{
+                            display: none;
+                        }
+                        .contact_icon-list{
+                            padding: 0;
+                            padding-top: 30px;
+                        }
+                        .contact_list{
+                            .contact_item {
+                                &:first-child{
+                                    margin-left: 0;
+                                }
+                            } 
+                        }
+        
+                    }
+                    .contact_open {
+                        text-align: center;
+                        padding-top: 30px;
+                    }
+                }
+            }
+                    
+        }
+        
+    }
+}
