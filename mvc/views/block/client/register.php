@@ -29,6 +29,10 @@
                      <input id="cf_password" type="password" name="cf_password" class="register_input" placeholder="Nhập lại password...">
                      <span class="form-message"></span>
                  </div>
+                 <div class="form-control">
+                     <input id="phone" type="text" name="phone" class="register_input" placeholder="0123456789">
+                     <span class="form-message"></span>
+                 </div>
                  <input type="hidden" name="register" value="register">
                  <button type="submit" class="btn-sign btn-signin">Register</button>
              </form>
@@ -46,6 +50,7 @@
 
          let email = this.querySelector('#email').value;
          let password = this.querySelector('#password').value;
+         let phone = this.querySelector('#phone').value;
 
          if (email && password)
              $.ajax({

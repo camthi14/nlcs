@@ -18,6 +18,7 @@ class Product extends Controller
         $id = 0;
         $per_page = 4;
         $page = 0;
+        $price_filter = -1;
 
         if (strtolower($_SERVER['REQUEST_METHOD']) == 'post') {
             if ($_POST['price_filter']) {
@@ -50,6 +51,10 @@ class Product extends Controller
             }
         }
 
+        if(isset($_POST['price_filter'])) {
+            $price_filter = $_POST['price_filter'];
+        }
+
         if (isset($_GET['page'])) {
             $page = (int) $_GET['page'] - 1;
         }
@@ -60,8 +65,10 @@ class Product extends Controller
             'page' => $page,
             'per_page' => $per_page,
             'key_w' => $keywords,
+            'filter_price' => $price_filter,
             'limit' => 15
         ]);
+
         $findCate = $this->cate->findCateById($id);
         $cats = $this->cate->getAll();
 
@@ -73,6 +80,7 @@ class Product extends Controller
             'total_page' => ceil((int) $this->product->count() / $per_page),
             'cats' => $cats,
             'products' => $products,
+            'js' => ['product']
         ]);
     }
 

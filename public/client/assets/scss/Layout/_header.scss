@@ -732,7 +732,7 @@
         position: relative;
         width: 500px;
         background-color: $title-color;
-        height: 90vh;
+        height: 100%;
         // transition: transform ease-in .5s;
         // transform: scale(0, 0) rotate(180deg);
 
@@ -795,7 +795,7 @@
                     flex-direction: column;
                     @include font($font, 1.6rem, 300, 1.6rem);
                     background-color: transparent;
-                    margin-bottom: 20px;
+                    margin-bottom: 15px;
                     border: none;
 
                     .register_input {

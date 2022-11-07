@@ -31,10 +31,10 @@ class ModelUsers extends DB
         return $this->pdo_query($sql);
     }
 
-    function insert($name, $email, $password, $created_at)
+    function insert($name, $email, $password, $phone, $created_at)
     {
-        $insertUser = "INSERT INTO users(name,email, password,group_id ,created_at) VALUES ('$name', '$email','$password',2 ,'$created_at')";
-        return $this->pdo_execute($insertUser);
+        $insertUser = "INSERT INTO users(name,email, password, phone, group_id ,created_at) VALUES ('$name', '$email','$password', '$phone', 2 ,'$created_at')";
+        return $this->pdo_execute($insertUser); 
     }
 
     function insertUser($name, $created_at)

@@ -44,14 +44,11 @@
                                             <p>Add to cart</p>
                                         </span>
                                     </a>
-
-                                    <div class="body-amount">
-                                        <span>1</span>
-                                        <div class="body-sign">
-                                            <span class="btn-sign btn-plus"><i class="fa-solid fa-plus"></i></span>
-                                            <span class="btn-sign btn-minus"><i class="fa-solid fa-minus"></i></span>
-                                        </div>
-                                    </div>
+                                    <a href="<?= _WEB_ROOT . '/product'?>" class="ml-5">
+                                        <span class=" home_bg-btn btn_add-cart">
+                                            <p>Shopping</p>
+                                        </span>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -60,7 +57,7 @@
             </div>
         </div>
     </div>
-    
+
     <div class="advertisement-pro">
         <h3>Laster products</h3>
         <div class="laster_product owl-carousel owl-theme">

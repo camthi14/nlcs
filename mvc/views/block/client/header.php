@@ -93,7 +93,7 @@
                     <?php if (isset($_SESSION['user']) && !empty($_SESSION['user'])) { ?>
                         <div class="" style="margin: 0 12px;">
                             <?php if (isset($_SESSION['user']['avt']) && !empty($_SESSION['user']['avt'])) { ?>
-                                <img src="<?php echo _PATH_AVATAR . $_SESSION['user']['avt'] ?>" alt="" class="cursor-pointer avatar w-[22px] h-[22px] rounded-full">
+                                <img src="<?= _PATH_AVATAR . $_SESSION['user']['avt'] ?>" alt="" class="cursor-pointer avatar w-[22px] h-[22px] rounded-full">
                             <?php } else { ?>
                                 <img src="https://ss-images.saostar.vn/wp700/pc/1613810558698/Facebook-Avatar_3.png" alt="" class="cursor-pointer avatar w-[22px] h-[22px] rounded-full">
                             <?php } ?>
@@ -103,13 +103,13 @@
                                     <div class="h-6 w-6 bg-white rotate-45 transform origin-bottom-left"></div>
                                 </div>
                                 <?php if ($_SESSION['user']['group_id'] == 1) { ?>
-                                    <li class=""><a class="rounded-t-xl block p-3 text-[#252c30] text-xl hover:bg-[#f9fbf6] hover:text-[#88b44e]" href="<?php echo _WEB_ROOT . '/admin' ?>">Admin</a></li>
+                                    <li class=""><a class="rounded-t-xl block p-3 text-[#252c30] text-xl hover:bg-[#f9fbf6] hover:text-[#88b44e]" href="<?= _WEB_ROOT . '/admin' ?>">Admin</a></li>
                                 <?php } ?>
                                 <?php if ($_SESSION['user']['group_id'] != 1) { ?>
-                                    <li class=""><a class="block p-3 text-[#252c30] text-xl hover:bg-[#f9fbf6] hover:text-[#88b44e]" href="<?php echo _WEB_ROOT . '/infoOrder' ?>">Info Order</a></li>
+                                    <li class=""><a class="block p-3 text-[#252c30] text-xl hover:bg-[#f9fbf6] hover:text-[#88b44e]" href="<?= _WEB_ROOT . '/infoOrder' ?>">Info Order</a></li>
                                 <?php } ?>
-                                <li class=""><a class="block p-3 text-[#252c30] text-xl hover:bg-[#f9fbf6] hover:text-[#88b44e]" href="<?php echo _WEB_ROOT . '/account' ?>">Info</a></li>
-                                <li class=""><a class="block p-3 text-[#252c30] text-xl hover:bg-[#f9fbf6] hover:text-[#88b44e]" href="<?php echo _WEB_ROOT . '/User/handleLogout' ?>">Logout</a></li>
+                                <li class=""><a class="block p-3 text-[#252c30] text-xl hover:bg-[#f9fbf6] hover:text-[#88b44e]" href="<?= _WEB_ROOT . '/account' ?>">Info</a></li>
+                                <li class=""><a class="block p-3 text-[#252c30] text-xl hover:bg-[#f9fbf6] hover:text-[#88b44e]" href="<?= _WEB_ROOT . '/User/handleLogout' ?>">Logout</a></li>
                             </ul>
                         </div>
 

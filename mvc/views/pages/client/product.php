@@ -91,17 +91,14 @@ if (isset($new_query_string[0])) {
                             <div class="line"></div>
                         </div>
                         <div class="products_left-filter">
-                            <div class="values">
-                                <div>$<span id="first"></span></div> - <div>$<span id="second"></span></div>
-                            </div>
                             <small>
                                 Current Range:
-                                <div>$<span id="third"></span></div>
+                                <div><span id="third"></span>&nbsp;$</div>
                             </small>
 
                             <form action="<?= _WEB_ROOT . '/product' ?>" method="post">
-                                <input id="progress" class="progress" name='price_filter' type="range" value="0" step="1" min="0" max="100">
-                                <button type='submit' class="btn btn-primary bg-primary">Search</button>
+                                <input id="progress" class="progress" name='price_filter' type="range" value="0" step="1" min="0" max="50">
+                                <button type='submit' class="btn btn-dark bg-dark mt-3">Search</button>
                             </form>
 
                         </div>
@@ -206,7 +203,7 @@ if (isset($new_query_string[0])) {
 
                             <?php if (isset($data['total_page'])) : ?>
                                 <?php for ($i = 1; $i <= $data['total_page']; $i++) : ?>
-                                    <li class="page-item fs-3 <?= (!isset($_GET['page']) && $i == 1) || (isset($_GET['page']) && $_GET['page'] == $i) ? 'active' : null ?>"><a class="page-link" href="<?= _WEB_ROOT . '/product?page=' . $i ?>"><?= $i ?></a></li>
+                                    <li class="page-item fs-3 <?= (!isset($_GET['page']) && $i == 1) || (isset($_GET['page']) && $_GET['page'] == $i) ? 'active' : null ?>"><a class="page-link text-dark" href="<?= _WEB_ROOT . '/product?page=' . $i ?>"><?= $i ?></a></li>
                                 <?php endfor ?>
                             <?php endif ?>
 

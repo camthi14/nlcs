@@ -228,6 +228,7 @@ class User extends Controller
         $email = $_POST['email'];
         $password = $_POST['password'];
         $cf_password = $_POST['cf_password'];
+        $phone = $_POST['phone'];
         $users = $this->users->getAll();
         $checkIsMail = false;
         $message = '';
@@ -253,7 +254,7 @@ class User extends Controller
             if ($password === $cf_password) {
 
                 $password = password_hash($password, PASSWORD_DEFAULT);
-                $status = $this->users->insert($email, $email, $password, $created_at);
+                $status = $this->users->insert($email, $email, $password, $phone, $created_at);
 
                 if ($status) {
                     $message = 'You have successfully registered!';

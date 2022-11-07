@@ -14,5 +14,18 @@ $(document).ready(function () {
             },
             error: (e) => console.log(e)
         })
-    })
+    });
+
+    function getPrice() {
+        $('#third').empty();
+        $('#third').append(() => {
+            return $('#progress').val();
+        });
+    }
+
+    getPrice();
+
+    $(document).on('change', '#progress', function (e) {
+        getPrice();
+    });
 })

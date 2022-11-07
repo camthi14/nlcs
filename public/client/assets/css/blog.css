@@ -692,7 +692,7 @@ body {
   position: relative;
   width: 500px;
   background-color: #252c30;
-  height: 90vh;
+  height: 100%;
 }
 .register .register_content .register_close {
   position: absolute;
@@ -750,7 +750,7 @@ body {
   font-weight: 300;
   line-height: 1.6rem;
   background-color: transparent;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   border: none;
 }
 .register .register_content .register_body .register_form .form-control .register_input {
